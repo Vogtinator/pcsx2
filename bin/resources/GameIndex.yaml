@@ -3123,6 +3123,7 @@ SCES-51607:
   compat: 5
   gameFixes:
     - EETimingHack # Fixes DMA errors.
+    - RC2MegaturretHack # Fixes Megaturret deployment
   gsHWFixes:
     mipmap: 1
     autoFlush: 1

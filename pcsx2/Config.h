@@ -45,6 +45,7 @@ enum GamefixId
 	Fix_VUOverflow,
 	Fix_XGKick,
 	Fix_BlitInternalFPS,
+	Fix_RC2Megaturret,
 
 	GamefixId_COUNT
 };
@@ -807,7 +808,8 @@ struct Pcsx2Config
 			VUSyncHack : 1, // Makes microVU run behind the EE to avoid VU register reading/writing sync issues. Useful for M-Bit games
 			VUOverflowHack : 1, // Tries to simulate overflow flag checks (not really possible on x86 without soft floats)
 			XgKickHack : 1, // Erementar Gerad, adds more delay to VU XGkick instructions. Corrects the color of some graphics, but breaks Tri-ace games and others.
-			BlitInternalFPSHack : 1; // Disables privileged register write-based FPS detection.
+			BlitInternalFPSHack : 1, // Disables privileged register write-based FPS detection.
+			RC2MegaturretHack : 1; // Ratchet & Clank 2 (PAL only) hack to tweak Megaturrent collision (?) for fixing deployment
 		BITFIELD_END
 
 		GamefixOptions();

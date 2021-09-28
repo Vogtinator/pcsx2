@@ -109,6 +109,10 @@ Panels::GameFixesPanel::GameFixesPanel( wxWindow* parent )
 			_("Use Blit for internal FPS"),
 			pxEt(L"Use alternative method to calclate internal FPS to avoid false readings in some games."
 			)
+		},
+		{
+			_("Ratchet && Clank 2 (PAL) hack to fix deployment of Megaturrets"),
+			wxEmptyString
 		}
 	};
 

@@ -866,7 +866,8 @@ static const char* const tbl_GamefixNames[] =
 	"VUSync",
 	"VUOverflow",
 	"XGKick",
-	"BlitInternalFPS"
+	"BlitInternalFPS",
+	"RC2Megaturret",
 };
 
 const char* EnumToString(GamefixId id)
@@ -908,6 +909,7 @@ void Pcsx2Config::GamefixOptions::Set(GamefixId id, bool enabled)
 		case Fix_VUSync:              VUSyncHack              = enabled; break;
 		case Fix_VUOverflow:          VUOverflowHack          = enabled; break;
 		case Fix_BlitInternalFPS:     BlitInternalFPSHack     = enabled; break;
+		case Fix_RC2Megaturret:	      RC2MegaturretHack	      = enabled; break;
 		jNO_DEFAULT;
 	}
 }
@@ -934,6 +936,8 @@ bool Pcsx2Config::GamefixOptions::Get(GamefixId id) const
 		case Fix_VUSync:              return VUSyncHack;
 		case Fix_VUOverflow:          return VUOverflowHack;
 		case Fix_BlitInternalFPS:     return BlitInternalFPSHack;
+		case Fix_RC2Megaturret:
+			return RC2MegaturretHack;
 		jNO_DEFAULT;
 	}
 	return false; // unreachable, but we still need to suppress warnings >_<
