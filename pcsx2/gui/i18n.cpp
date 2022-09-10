@@ -62,7 +62,7 @@ LangPackEnumeration::LangPackEnumeration( wxLanguage langId )
 LangPackEnumeration::LangPackEnumeration()
 	: wxLangId(wxLANGUAGE_DEFAULT)
 	, canonicalName(L"default")
-	, englishName(L"System Default" + _(" (default)"))
+	, englishName(L"System Default" + wxString(_(" (default)")))
 {
 	int sysLang = wxLocale::GetSystemLanguage();
 
